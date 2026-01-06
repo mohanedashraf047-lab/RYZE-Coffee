@@ -1,0 +1,51 @@
+@import "tailwindcss";
+
+:root {
+  --color-terracotta: #CA5839;
+  --color-deep-brown: #533A2D;
+  --color-accent-rust: #A3452C;
+  --color-cream-bg: #F5F0EC;
+}
+
+body {
+  background-color: var(--color-cream-bg);
+  color: var(--color-deep-brown);
+  font-family: "Sofia Sans", sans-serif;
+}
+
+.sofia-sans {
+  font-family: "Sofia Sans", sans-serif;
+  font-optical-sizing: auto;
+}
+
+/* The Infinite Loop Animation */
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-scroll {
+  animation: scroll 30s linear infinite;
+}
+
+/* Premium Visual Effect: Soft edges for the scrolling banner */
+.banner-mask {
+  mask-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 1) 10%,
+    rgba(0, 0, 0, 1) 90%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  -webkit-mask-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 1) 10%,
+    rgba(0, 0, 0, 1) 90%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
